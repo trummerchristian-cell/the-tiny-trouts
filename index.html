@@ -5,95 +5,277 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="The Tiny Trouts – Swiss Folk, Blues & Rock. Eigene Songs und Covers, akustisch und verstärkt.">
 <title>The Tiny Trouts | Swiss Folk · Blues · Rock</title>
+
 <style>
-:root{--petrol:#102f30;--petrol2:#183c3b;--cream:#f1e8d5;--paper:#e9dfca;--rust:#a74732;--ink:#172526;--muted:#b9b3a5}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.55}
-a{color:inherit}.topbar{background:var(--petrol);color:var(--cream);display:flex;align-items:center;justify-content:space-between;padding:14px clamp(18px,5vw,72px);gap:20px}
-.brand{font-family:Impact,"Arial Narrow",sans-serif;letter-spacing:.08em;font-size:1.05rem;text-decoration:none}
-nav{display:flex;gap:clamp(12px,2.5vw,34px);flex-wrap:wrap}nav a{text-decoration:none;font:600 .78rem Arial,sans-serif;letter-spacing:.09em;text-transform:uppercase;color:var(--cream)}
-.hero{background:var(--petrol);color:var(--cream);padding:clamp(18px,3vw,42px) clamp(18px,5vw,72px) 38px}
-.logo-wrap{display:flex;justify-content:center;margin:0 auto 24px;max-width:900px;background:#050505;padding:8px 16px}
-.logo-wrap img{display:block;width:min(100%,850px);height:auto;max-height:300px;object-fit:contain}
-.hero-photo{width:100%;max-height:650px;object-fit:cover;display:block;filter:saturate(.88)}
-.hero-copy{display:flex;justify-content:space-between;align-items:end;gap:28px;padding-top:22px;flex-wrap:wrap}
-h1,h2,h3{font-family:Impact,"Arial Narrow",Arial,sans-serif;text-transform:uppercase;letter-spacing:.035em;line-height:1.05;margin:0}
-h1{font-size:clamp(2rem,5vw,4.3rem)}.hero-copy p{max-width:440px;margin:0;color:#e5ddcd;font-size:1.08rem}
-.quicklinks{background:var(--rust);color:#fff;display:flex;justify-content:center;gap:0;flex-wrap:wrap;padding:0 12px}
-.quicklinks a{padding:14px 24px;text-decoration:none;font:700 .78rem Arial,sans-serif;text-transform:uppercase;letter-spacing:.1em}
-section{padding:clamp(42px,7vw,84px) clamp(18px,7vw,100px)}
-.intro{display:grid;grid-template-columns:minmax(220px,.8fr) 1.2fr;gap:50px;align-items:start}
-h2{font-size:clamp(2rem,4vw,3.4rem);margin-bottom:18px}
-.lead{font-size:1.2rem;max-width:620px}.note{color:#586260}
-.members{background:var(--paper)}
-.member-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px}
-.member{background:var(--cream);padding:12px}
-.member img{width:100%;height:300px;object-fit:cover;display:block;filter:saturate(.82)}
-.member h3{font-size:1.65rem;margin:14px 0 5px}.member p{margin:0;color:#4c5551}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap}
-.live{background:var(--petrol);color:var(--cream)}
-.live .sub{color:#d3cdbf;max-width:620px}
-.video-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:28px}
-.video-card{background:#071f20;padding:10px}
-video{width:100%;display:block;background:#000;aspect-ratio:16/9}
-.video-card p{margin:10px 4px 2px;font:600 .78rem Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
-.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:25px}
-.gallery-grid img{width:100%;height:220px;object-fit:cover;display:block}
-.contact{background:var(--rust);color:#fff;text-align:center}
-.contact p{max-width:620px;margin:14px auto 0;font-size:1.1rem}
-footer{background:#0b2223;color:#d8d1c2;padding:20px;text-align:center;font: .75rem Arial,sans-serif;letter-spacing:.06em}
-@media(max-width:760px){.topbar{align-items:flex-start;flex-direction:column}.intro{grid-template-columns:1fr;gap:12px}.member-grid{grid-template-columns:1fr}.member img{height:360px}.video-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid img{height:180px}.hero-copy{align-items:flex-start;flex-direction:column}}
+:root {
+  --petrol:#102f30;
+  --petrol2:#183c3b;
+  --cream:#f1e8d5;
+  --paper:#e9dfca;
+  --rust:#a74732;
+  --ink:#172526;
+  --muted:#b9b3a5;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0;
+  background:var(--cream);
+  color:var(--ink);
+  font-family:Georgia,"Times New Roman",serif;
+  line-height:1.55;
+}
+a { color:inherit; }
+.topbar {
+  background:var(--petrol);
+  color:var(--cream);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px clamp(18px,5vw,72px);
+  gap:20px;
+}
+.brand {
+  font-family:Impact,"Arial Narrow",sans-serif;
+  letter-spacing:.08em;
+  font-size:1.05rem;
+  text-decoration:none;
+}
+nav {
+  display:flex;
+  gap:clamp(12px,2.5vw,34px);
+  flex-wrap:wrap;
+}
+nav a {
+  text-decoration:none;
+  font:600 .78rem Arial,sans-serif;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  color:var(--cream);
+}
+.hero {
+  background:var(--petrol);
+  color:var(--cream);
+  padding:clamp(18px,3vw,42px) clamp(18px,5vw,72px) 38px;
+}
+.logo-wrap {
+  display:flex;
+  justify-content:center;
+  margin:0 auto 24px;
+  max-width:900px;
+  background:#050505;
+  padding:8px 16px;
+}
+.logo-wrap img {
+  display:block;
+  width:min(100%,850px);
+  height:auto;
+  max-height:300px;
+  object-fit:contain;
+}
+.hero-photo {
+  width:100%;
+  max-height:650px;
+  object-fit:cover;
+  display:block;
+  filter:saturate(.88);
+}
+.hero-copy {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:28px;
+  padding-top:22px;
+  flex-wrap:wrap;
+}
+h1,h2,h3 {
+  font-family:Impact,"Arial Narrow",Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.035em;
+  line-height:1.05;
+  margin:0;
+}
+h1 { font-size:clamp(2rem,5vw,4.3rem); }
+.hero-copy p {
+  max-width:440px;
+  margin:0;
+  color:#e5ddcd;
+  font-size:1.08rem;
+}
+.quicklinks {
+  background:var(--rust);
+  color:#fff;
+  display:flex;
+  justify-content:center;
+  gap:0;
+  flex-wrap:wrap;
+  padding:0 12px;
+}
+.quicklinks a {
+  padding:14px 24px;
+  text-decoration:none;
+  font:700 .78rem Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+}
+section { padding:clamp(42px,7vw,84px) clamp(18px,7vw,100px); }
+.intro {
+  display:grid;
+  grid-template-columns:minmax(220px,.8fr) 1.2fr;
+  gap:50px;
+  align-items:start;
+}
+h2 {
+  font-size:clamp(2rem,4vw,3.4rem);
+  margin-bottom:18px;
+}
+.lead { font-size:1.2rem; max-width:620px; }
+.note { color:#586260; }
+.members { background:var(--paper); }
+.member-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin-top:28px;
+}
+.member { background:var(--cream); padding:12px; }
+.member img {
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  display:block;
+  filter:saturate(.82);
+}
+.member h3 { font-size:1.65rem; margin:14px 0 5px; }
+.member p { margin:0; color:#4c5551; }
+.live { background:var(--petrol); color:var(--cream); }
+.live p { color:#d3cdbf; max-width:620px; }
+.gallery-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin-top:25px;
+}
+.gallery-grid img {
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+}
+.contact {
+  background:var(--rust);
+  color:#fff;
+  text-align:center;
+}
+.contact p {
+  max-width:620px;
+  margin:14px auto 0;
+  font-size:1.1rem;
+}
+footer {
+  background:#0b2223;
+  color:#d8d1c2;
+  padding:20px;
+  text-align:center;
+  font:.75rem Arial,sans-serif;
+  letter-spacing:.06em;
+}
+@media(max-width:760px) {
+  .topbar { align-items:flex-start; flex-direction:column; }
+  .intro { grid-template-columns:1fr; gap:12px; }
+  .member-grid { grid-template-columns:1fr; }
+  .member img { height:360px; }
+  .gallery-grid { grid-template-columns:repeat(2,1fr); }
+  .gallery-grid img { height:180px; }
+  .hero-copy { align-items:flex-start; flex-direction:column; }
+}
 </style>
 </head>
+
 <body>
 <header class="topbar">
   <a class="brand" href="#home">THE TINY TROUTS</a>
   <nav aria-label="Hauptnavigation">
-    <a href="#band">Band</a><a href="#live">Live & Music</a><a href="#gallery">Bandalltag</a><a href="#contact">Kontakt</a>
+    <a href="#band">Band</a>
+    <a href="#live">Live & Music</a>
+    <a href="#gallery">Bandalltag</a>
+    <a href="#contact">Kontakt</a>
   </nav>
 </header>
+
 <main id="home">
   <div class="hero">
-    <div class="logo-wrap"><img src="assets/logo-tiny-trouts.png" alt="The Tiny Trouts – Original-Logo"></div>
-    <img class="hero-photo" src="assets/band-portrait-1.jpg" alt="The Tiny Trouts mit Gitarre, Mandoline und Schlagzeug">
+    <div class="logo-wrap">
+      <img src="logo-tiny-trouts.png" alt="The Tiny Trouts – Original-Logo">
+    </div>
+
+    <img class="hero-photo" src="band-portrait-1.jpg" alt="The Tiny Trouts">
+
     <div class="hero-copy">
       <h1>Swiss Folk · Blues · Rock</h1>
       <p>Mal akustisch, mal verstärkt. Eigene Songs und Covers – uf Englisch und Schwiizerdütsch. Dazu Gypsy-Sounds und entspannte Tunes. Was gerade passt, kommt auf die Bühne.</p>
     </div>
   </div>
-  <div class="quicklinks"><a href="#live">Live & Music</a><a href="#band">Die Band</a><a href="#gallery">Bandalltag</a><a href="#contact">Booking</a></div>
+
+  <div class="quicklinks">
+    <a href="#live">Live & Music</a>
+    <a href="#band">Die Band</a>
+    <a href="#gallery">Bandalltag</a>
+    <a href="#contact">Booking</a>
+  </div>
 
   <section class="intro" id="band">
-    <div><h2>Drei Musiker.<br>Viele Richtungen.</h2><p class="note">Und je nach Konzert kommen noch befreundete Musiker dazu.</p></div>
-    <div><p class="lead">The Tiny Trouts bewegen sich irgendwo zwischen Folk, Rock und Blues. Mal mit akustischen Instrumenten, mal mit Strom. Mal groovig, mal verspielt, mal ganz entspannt.</p><p>Wir spielen eigene Songs und Covers, singen auf Englisch und Schweizerdeutsch und lassen uns musikalisch gerne überraschen. Eine Schublade? Haben wir gerade keine zur Hand.</p></div>
+    <div>
+      <h2>Drei Musiker.<br>Viele Richtungen.</h2>
+      <p class="note">Und je nach Konzert kommen noch befreundete Musiker dazu.</p>
+    </div>
+    <div>
+      <p class="lead">The Tiny Trouts bewegen sich irgendwo zwischen Folk, Rock und Blues. Mal mit akustischen Instrumenten, mal mit Strom. Mal groovig, mal verspielt, mal ganz entspannt.</p>
+      <p>Wir spielen eigene Songs und Covers, singen auf Englisch und Schweizerdeutsch und lassen uns musikalisch gerne überraschen. Eine Schublade? Haben wir gerade keine zur Hand.</p>
+    </div>
   </section>
 
   <section class="members">
     <h2>Die Trouts</h2>
     <div class="member-grid">
-      <article class="member"><img src="assets/rolf.jpg" alt="Rolf mit Gitarre"><h3>Rolf</h3><p>Guitar · Harmonica · Voice</p></article>
-      <article class="member"><img src="assets/lucien.jpg" alt="Lucien am Schlagzeug"><h3>Lucien</h3><p>Drums</p></article>
-      <article class="member"><img src="assets/chregu.jpg" alt="Christian, genannt Chregu"><h3>Christian «Chregu»</h3><p>Bass · Guitar · Banjo · Mandolin · Flute · Backing Voice</p></article>
+      <article class="member">
+        <img src="rolf.jpg" alt="Rolf mit Gitarre">
+        <h3>Rolf</h3>
+        <p>Guitar · Harmonica · Voice</p>
+      </article>
+
+      <article class="member">
+        <img src="lucien.jpg" alt="Lucien am Schlagzeug">
+        <h3>Lucien</h3>
+        <p>Drums</p>
+      </article>
+
+      <article class="member">
+        <img src="chregu.jpg" alt="Christian, genannt Chregu">
+        <h3>Christian «Chregu»</h3>
+        <p>Bass · Guitar · Banjo · Mandolin · Flute · Backing Voice</p>
+      </article>
     </div>
   </section>
 
   <section class="live" id="live">
-    <div class="section-head"><div><h2>Live & Music</h2><p class="sub">Vier kurze Einblicke in unterschiedliche Auftritte. Weitere Songs und Konzertdaten folgen.</p></div></div>
-    <div class="video-grid">
-      <div class="video-card"><video controls preload="metadata"><source src="assets/live-1.mp4" type="video/mp4"></video><p>Live – Clip 01</p></div>
-      <div class="video-card"><video controls preload="metadata"><source src="assets/live-2.mp4" type="video/mp4"></video><p>Live – Clip 02</p></div>
-      <div class="video-card"><video controls preload="metadata"><source src="assets/live-3.mp4" type="video/mp4"></video><p>Live – Clip 03</p></div>
-      <div class="video-card"><video controls preload="metadata"><source src="assets/live-4.mp4" type="video/mp4"></video><p>Live – Clip 04</p></div>
-    </div>
+    <h2>Live & Music</h2>
+    <p>Hier gibt es bald Videos von unseren Auftritten. Wir arbeiten daran, die Live-Clips einzubinden.</p>
   </section>
 
   <section id="gallery">
     <h2>Zwischen den Songs</h2>
     <p class="note">Probe, Aufbau, Pause und alles, was sonst noch dazugehört.</p>
+
     <div class="gallery-grid">
-      <img src="assets/everyday-1.jpg" alt="The Tiny Trouts unterwegs"><img src="assets/everyday-2.jpg" alt="Bandmoment">
-      <img src="assets/everyday-3.jpg" alt="Auftritt und Bandalltag"><img src="assets/everyday-4.jpg" alt="Musiker beim Auftritt">
-      <img src="assets/everyday-5.jpg" alt="Bandalltag"><img src="assets/everyday-6.jpg" alt="Blick auf das Schlagzeug">
-      <img src="assets/everyday-7.jpg" alt="Bühnenaufbau"><img src="assets/everyday-8.jpg" alt="Vorbereitung eines Auftritts">
+      <img src="everyday-1.jpg" alt="The Tiny Trouts unterwegs">
+      <img src="everyday-2.jpg" alt="Bandmoment">
+      <img src="everyday-3.jpg" alt="Auftritt und Bandalltag">
+      <img src="everyday-4.jpg" alt="Musiker beim Auftritt">
+      <img src="everyday-5.jpg" alt="Bandalltag">
+      <img src="everyday-6.jpg" alt="Blick auf das Schlagzeug">
+      <img src="everyday-7.jpg" alt="Bühnenaufbau">
+      <img src="everyday-8.jpg" alt="Vorbereitung eines Auftritts">
     </div>
   </section>
 
@@ -101,9 +283,10 @@ footer{background:#0b2223;color:#d8d1c2;padding:20px;text-align:center;font: .75
     <h2>Booking & Kontakt</h2>
     <p>Du planst einen Anlass und suchst Live-Musik mit Folk, Blues und Rock? Schreib uns – wir freuen uns, von dir zu hören.</p>
     <p><a href="mailto:tinytrouts07@gmail.com" style="font-weight:bold;color:#fff">tinytrouts07@gmail.com</a></p>
-<p>Instagram & Facebook – Links folgen.</p>
+    <p>Instagram & Facebook – Links folgen.</p>
   </section>
 </main>
+
 <footer>THE TINY TROUTS · SWISS FOLK · BLUES · ROCK</footer>
 </body>
 </html>
