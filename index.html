@@ -37,6 +37,11 @@ h2{font-size:clamp(2rem,4vw,3.4rem);margin-bottom:18px}
 .video-card{background:#071f20;padding:10px}
 video{width:100%;display:block;background:#000;aspect-ratio:16/9}
 .video-card p{margin:10px 4px 2px;font:600 .78rem Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+ .video-card:last-child:nth-child(odd){
+  grid-column:1 / -1;
+  width:50%;
+  justify-self:center;
+}
 .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:25px}
 .gallery-grid img{width:100%;height:auto;max-height:360px;object-fit:contain;object-position:center;display:block;background:var(--paper)}
 .contact{background:var(--rust);color:#fff;text-align:center}
